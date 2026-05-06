@@ -146,7 +146,7 @@ func ParseAgentSurface(s string) (AgentSurface, error) {
 
 // MismatchError is returned by Derive when a declared surface is not allowed
 // for the given agent type. Callers should surface this as an actionable
-// HTTP 400 in the same shape the server uses (see the Phase 2 plan).
+// HTTP 400 in the same shape the server uses.
 type MismatchError struct {
 	AgentType AgentType
 	Declared  AgentSurface

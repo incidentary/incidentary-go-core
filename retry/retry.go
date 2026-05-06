@@ -1,9 +1,8 @@
 // Package retry implements the exponential-backoff helper used by ingest
 // clients in this module.
 //
-// The defaults match Phase 3.1.4 of the OpenTelemetry incident-layer plan:
-// base 100ms, factor 2, max 5 attempts, max wait 30s. The helper is
-// context-aware and never sleeps past ctx.Done().
+// Defaults: base 100ms, factor 2, max 5 attempts, max wait 30s. The helper
+// is context-aware and never sleeps past ctx.Done().
 package retry
 
 import (
